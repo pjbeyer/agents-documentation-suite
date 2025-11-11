@@ -1,0 +1,141 @@
+{
+  "platforms": {
+    "notion": {
+      "enabled": true,
+      "primaryUse": "Team collaboration documentation",
+      "authentication": "Via MCP server (Notion plugin)",
+      "features": {
+        "databases": true,
+        "templates": true,
+        "views": true,
+        "accessControl": true,
+        "comments": true,
+        "embeds": true
+      },
+      "formatting": {
+        "codeBlocks": "Notion code block format",
+        "callouts": "Use for important info",
+        "toggles": "Use for collapsible sections",
+        "tables": "Native Notion tables",
+        "links": "Inline page mentions"
+      },
+      "accessLevels": [
+        "public",
+        "workspace",
+        "private",
+        "custom"
+      ],
+      "workConfiguration": {
+        "securityArticles": "c12a2787-2371-4fae-b4bc-33aba90013c4",
+        "templates": "2644b351646a816f866ce3d6287c3bb3"
+      }
+    },
+    "github": {
+      "enabled": true,
+      "primaryUse": "Open source and version-controlled documentation",
+      "authentication": "Via git/gh CLI",
+      "features": {
+        "markdownRendering": true,
+        "syntaxHighlighting": true,
+        "versionControl": true,
+        "githubPages": true,
+        "pullRequests": true
+      },
+      "formatting": {
+        "markdown": "GitHub-flavored markdown",
+        "codeBlocks": "With language specifier",
+        "badges": "shields.io for status badges",
+        "relativeLinks": "For repo navigation",
+        "tableOfContents": "For long documents"
+      },
+      "accessLevels": [
+        "public",
+        "private",
+        "organization",
+        "collaborators"
+      ]
+    },
+    "local": {
+      "enabled": true,
+      "primaryUse": "AGENTS.md files, hierarchical documentation, development docs",
+      "authentication": "File system permissions",
+      "features": {
+        "hierarchicalOrganization": true,
+        "fastAccess": true,
+        "versionControl": "Via git",
+        "portable": true,
+        "offlineAccess": true
+      },
+      "formatting": {
+        "markdown": "Standard markdown",
+        "paths": "Absolute paths for cross-references",
+        "minimal": "Clean, scannable format",
+        "headings": "Clear hierarchy",
+        "lists": "Bullets and tables"
+      },
+      "locations": {
+        "global": "/Users/pjbeyer/Projects/AGENTS.md",
+        "profile": "{profilePath}/AGENTS.md",
+        "project": "{projectPath}/AGENTS.md",
+        "agent": "{agentPath}/AGENTS.md",
+        "docs": "{levelPath}/docs/"
+      }
+    }
+  },
+  "publishingWorkflows": {
+    "notion": {
+      "steps": [
+        "Convert markdown to Notion format",
+        "Create or update page/database entry",
+        "Set properties",
+        "Configure access permissions",
+        "Add to workspace hierarchy"
+      ],
+      "requirements": [
+        "Notion MCP server configured",
+        "Database IDs available",
+        "Workspace permissions"
+      ]
+    },
+    "github": {
+      "steps": [
+        "Commit documentation to repository",
+        "Push to appropriate branch",
+        "Update cross-references",
+        "Configure GitHub Pages (if applicable)",
+        "Tag release versions (if applicable)"
+      ],
+      "requirements": [
+        "Git repository initialized",
+        "Remote configured",
+        "Push permissions"
+      ]
+    },
+    "local": {
+      "steps": [
+        "Write to correct hierarchy level",
+        "Update cross-references",
+        "Verify file permissions",
+        "Update parent documentation",
+        "Add to git (if tracked)"
+      ],
+      "requirements": [
+        "Directory structure exists",
+        "Write permissions",
+        "Hierarchy level identified"
+      ]
+    }
+  },
+  "crossPlatformSupport": {
+    "linkingStrategy": {
+      "notionToGithub": "Use public GitHub URLs",
+      "githubToNotion": "Link to Notion pages if accessible",
+      "localToNotion": "Publish to Notion, link to published page",
+      "localToGithub": "Commit to GitHub, link to GitHub URL"
+    },
+    "synchronization": {
+      "enabled": false,
+      "note": "Manual publishing recommended to maintain platform-specific formatting and control"
+    }
+  }
+}

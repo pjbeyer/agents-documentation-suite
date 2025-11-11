@@ -1,0 +1,93 @@
+{
+  "hierarchyLevels": {
+    "global": {
+      "path": "/Users/pjbeyer/Projects",
+      "agentsMd": "/Users/pjbeyer/Projects/AGENTS.md",
+      "docsPath": "/Users/pjbeyer/Projects/docs",
+      "tokenBudget": "8-12k characters",
+      "scope": "Cross-profile patterns, environment setup, global standards"
+    },
+    "profile": {
+      "paths": {
+        "pjbeyer": "/Users/pjbeyer/Projects/pjbeyer",
+        "work": "/Users/pjbeyer/Projects/work",
+        "play": "/Users/pjbeyer/Projects/play",
+        "home": "/Users/pjbeyer/Projects/home"
+      },
+      "agentsMd": "{profilePath}/AGENTS.md",
+      "docsPath": "{profilePath}/docs",
+      "tokenBudget": "5-8k characters",
+      "scope": "Profile philosophy, standards, tech stack, workflows"
+    },
+    "project": {
+      "agentsMd": "{projectPath}/AGENTS.md",
+      "docsPath": "{projectPath}/docs",
+      "tokenBudget": "4-6k characters",
+      "scope": "Project architecture, agent registry, routing, integrations"
+    },
+    "agent": {
+      "agentsMd": "{agentPath}/AGENTS.md",
+      "docsPath": "{agentPath}/docs",
+      "tokenBudget": "2-6k characters (profile-dependent)",
+      "scope": "Agent specification, workflows, integration points, sub-agents"
+    }
+  },
+  "organizationPrinciples": {
+    "contentAtAppropriateLevel": "Each piece of information should exist at exactly one level",
+    "referenceNotDuplicate": "Higher levels should be referenced, not duplicated at lower levels",
+    "parentContextAvailable": "Parent context is available to all children",
+    "minimalLoading": "Only load context relevant to current level"
+  },
+  "contentPlacement": {
+    "global": [
+      "Cross-profile MCP patterns",
+      "Git configuration",
+      "Environment setup",
+      "Profile management",
+      "Global optimization patterns"
+    ],
+    "profile": [
+      "Profile-specific tools",
+      "Profile standards (test coverage, docs)",
+      "Profile tech stack",
+      "Profile collaboration patterns"
+    ],
+    "project": [
+      "Project architecture",
+      "Agent registry and routing",
+      "Project-specific patterns",
+      "Integration patterns"
+    ],
+    "agent": [
+      "Agent purpose and capabilities",
+      "Agent-specific workflows",
+      "Sub-agent list",
+      "Integration points"
+    ]
+  },
+  "extractionRules": {
+    "extractToGlobalWhen": [
+      "Pattern appears in 2+ profiles",
+      "Truly cross-cutting concern",
+      "Benefits from centralization"
+    ],
+    "keepInProfileWhen": [
+      "Profile-specific implementation",
+      "Different across profiles",
+      "Context-dependent"
+    ],
+    "extractToDocsWhen": [
+      "Detailed procedures",
+      "Comprehensive examples",
+      "Historical context",
+      "Edge cases",
+      "Verbose explanations"
+    ],
+    "keepInAgentsMdWhen": [
+      "Essential for routing decisions",
+      "Required for agent coordination",
+      "Critical for tool access",
+      "Key for understanding purpose"
+    ]
+  }
+}

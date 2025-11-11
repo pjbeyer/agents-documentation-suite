@@ -1,0 +1,135 @@
+{
+  "audiences": {
+    "human": {
+      "description": "End users, developers, stakeholders",
+      "primaryGoal": "Comprehension and learning",
+      "writingStyle": {
+        "tone": "Friendly, helpful, encouraging",
+        "language": "Simple, jargon-free",
+        "structure": "Progressive complexity",
+        "examples": "Concrete, working examples",
+        "detail": "Comprehensive with context"
+      },
+      "documentTypes": [
+        "User guides",
+        "Tutorials",
+        "README files",
+        "Explanatory docs",
+        "Procedural docs",
+        "FAQs",
+        "Onboarding materials"
+      ],
+      "qualityMetrics": [
+        "Comprehension on first read",
+        "Task completion success",
+        "Time to productivity",
+        "Support request reduction",
+        "User satisfaction"
+      ],
+      "tokenBudget": "Unlimited - prioritize clarity over brevity"
+    },
+    "machine": {
+      "description": "AI agents, context loading systems",
+      "primaryGoal": "Token efficiency and quick access",
+      "writingStyle": {
+        "tone": "Concise, structured",
+        "language": "Essential only",
+        "structure": "Hierarchical, scannable",
+        "examples": "Minimal, referenced",
+        "detail": "Brief with references to detailed docs"
+      },
+      "documentTypes": [
+        "AGENTS.md files",
+        "CLAUDE.md files",
+        "Agent specifications",
+        "Context files"
+      ],
+      "qualityMetrics": [
+        "Token usage within budget",
+        "Fast context loading",
+        "Clear routing decisions",
+        "No redundant information",
+        "All info accessible via references"
+      ],
+      "tokenBudget": {
+        "global": "8-12k characters",
+        "profile": "5-8k characters",
+        "project": "4-6k characters",
+        "agent": "2-6k characters"
+      }
+    },
+    "team": {
+      "description": "Internal team members, collaborators",
+      "primaryGoal": "Collaboration and process integration",
+      "writingStyle": {
+        "tone": "Clear, action-oriented",
+        "language": "Team-specific terminology OK",
+        "structure": "Scannable, cross-referenced",
+        "examples": "Team-relevant scenarios",
+        "detail": "Practical with clear owners"
+      },
+      "documentTypes": [
+        "Process documentation",
+        "Meeting notes",
+        "Project status updates",
+        "Team dashboards",
+        "Runbooks and SOPs",
+        "Decision logs"
+      ],
+      "primaryPlatform": "Notion",
+      "qualityMetrics": [
+        "Findability",
+        "Actionability",
+        "Currency",
+        "Collaboration effectiveness",
+        "Tool integration"
+      ],
+      "tokenBudget": "Moderate - clarity over brevity, but avoid verbosity"
+    },
+    "public": {
+      "description": "External audience, clients, open source community",
+      "primaryGoal": "Professional presentation and completeness",
+      "writingStyle": {
+        "tone": "Professional, approachable",
+        "language": "Precise, technical",
+        "structure": "Comprehensive, well-organized",
+        "examples": "Tested, working examples",
+        "detail": "Complete coverage, no placeholders"
+      },
+      "documentTypes": [
+        "Open source README",
+        "Public API documentation",
+        "Client deliverables",
+        "Contributing guidelines",
+        "Release notes",
+        "Technical specifications"
+      ],
+      "qualityMetrics": [
+        "Professional polish",
+        "Zero errors",
+        "Complete coverage",
+        "Working examples",
+        "Security and legal compliance",
+        "Positive first impression"
+      ],
+      "tokenBudget": "Generous - prioritize completeness and professionalism"
+    }
+  },
+  "audienceSelection": {
+    "byContext": {
+      "AGENTS.md": "machine",
+      "README.md": "human or public",
+      "docs/": "human",
+      "Notion": "team",
+      "API reference": "public",
+      "Tutorial": "human",
+      "Process doc": "team"
+    },
+    "byPurpose": {
+      "AI context loading": "machine",
+      "User education": "human",
+      "Team collaboration": "team",
+      "External communication": "public"
+    }
+  }
+}

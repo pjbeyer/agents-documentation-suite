@@ -1,0 +1,85 @@
+{
+  "name": "agents-documentation-suite",
+  "version": "1.0.0",
+  "description": "Hierarchical documentation system with audience specialization (human/machine/team/public) and multi-platform publishing",
+  "author": {
+    "name": "Phil Beyer",
+    "email": "6152278+pjbeyer@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pjbeyer/agents-documentation-suite"
+  },
+  "skills": {
+    "write-human-docs": {
+      "description": "Write human-readable documentation optimized for comprehension and learning",
+      "path": "./skills/writing/write-human-docs.md"
+    },
+    "write-machine-docs": {
+      "description": "Write AI-optimized documentation (AGENTS.md) with token efficiency and hierarchical structure",
+      "path": "./skills/writing/write-machine-docs.md"
+    },
+    "write-team-docs": {
+      "description": "Write team collaboration documentation (Notion) with process integration",
+      "path": "./skills/writing/write-team-docs.md"
+    },
+    "write-public-docs": {
+      "description": "Write polished public-facing documentation for open source and clients",
+      "path": "./skills/writing/write-public-docs.md"
+    },
+    "write-docs": {
+      "description": "General documentation writing with audience selection",
+      "path": "./skills/writing/write-docs.md"
+    },
+    "maintain-docs": {
+      "description": "Maintain documentation with updates, cross-references, and version tracking",
+      "path": "./skills/management/maintain-docs.md"
+    },
+    "publish-docs": {
+      "description": "Publish documentation to multiple platforms (Notion, GitHub, local)",
+      "path": "./skills/management/publish-docs.md"
+    },
+    "manage-profile-docs": {
+      "description": "Manage profile-level documentation and standards",
+      "path": "./skills/management/manage-profile-docs.md"
+    },
+    "optimize-docs": {
+      "description": "Optimize documentation for token efficiency and clarity",
+      "path": "./skills/optimization/optimize-docs.md"
+    },
+    "curate-agent-docs": {
+      "description": "Curate agent-level documentation with completeness verification",
+      "path": "./skills/optimization/curate-agent-docs.md"
+    },
+    "coordinate-project-docs": {
+      "description": "Coordinate project-level documentation across components",
+      "path": "./skills/orchestration/coordinate-project-docs.md"
+    },
+    "coordinate-global-docs": {
+      "description": "Coordinate global-level documentation and standards",
+      "path": "./skills/orchestration/coordinate-global-docs.md"
+    },
+    "organize-agents": {
+      "description": "Organize multi-agent documentation and workflows",
+      "path": "./skills/orchestration/organize-agents.md"
+    }
+  },
+  "commands": {
+    "doc": {
+      "description": "Documentation management with subcommands for writing, optimizing, publishing",
+      "path": "./commands/doc.md"
+    }
+  },
+  "config": {
+    "hierarchy-rules": {
+      "path": "./config/hierarchy-rules.json"
+    },
+    "audience-profiles": {
+      "path": "./config/audience-profiles.json"
+    },
+    "platform-config": {
+      "path": "./config/platform-config.json"
+    }
+  }
+}
