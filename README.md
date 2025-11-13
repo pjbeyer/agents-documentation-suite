@@ -1,6 +1,6 @@
 # agents-documentation-suite
 
-A Claude Code plugin for hierarchical documentation management with audience specialization (human/machine/team/public) and multi-platform publishing.
+Hierarchical documentation with audience optimization and multi-platform publishing.
 
 ## Features
 
@@ -13,21 +13,9 @@ A Claude Code plugin for hierarchical documentation management with audience spe
 
 ## Installation
 
-### Via agents-marketplace (Recommended)
-
 ```bash
-# Add the marketplace
 /plugin marketplace add pjbeyer/agents-marketplace
-
-# Install the plugin
 /plugin install agents-documentation-suite@agents-marketplace
-```
-
-### Direct Installation
-
-```bash
-/plugin marketplace add pjbeyer/agents-documentation-suite
-/plugin install agents-documentation-suite@agents-documentation-suite
 ```
 
 ## Command: `/doc`
@@ -272,16 +260,8 @@ See the architecture document for comprehensive examples of each documentation t
 
 ## License
 
-MIT License - see LICENSE file for details
-
-## Author
-
-Paul Beyer <paul@pjbeyer.com>
+MIT License
 
 ## Repository
 
 https://github.com/pjbeyer/agents-documentation-suite
-
-## Version
-
-1.0.0
