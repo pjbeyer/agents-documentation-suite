@@ -2,6 +2,23 @@
 
 Hierarchical documentation with audience optimization and multi-platform publishing.
 
+## Quick Start for New Users
+
+**Pre-approve skills for faster workflow**: Add this to your Claude Code settings:
+
+```json
+{
+  "approvedSkills": [
+    "agents-documentation-suite:write-human-docs",
+    "agents-documentation-suite:write-machine-docs",
+    "agents-documentation-suite:optimize-docs",
+    "agents-documentation-suite:maintain-docs"
+  ]
+}
+```
+
+**Benefits**: `/doc` commands will run without prompting.
+
 ## Features
 
 - **Audience Specialization**: Optimize docs for humans, AI agents, teams, or public
