@@ -1,3 +1,7 @@
+---
+description: Comprehensive documentation management for writing, maintaining, optimizing, and publishing docs
+---
+
 # Doc - Documentation Management
 
 Comprehensive documentation management with subcommands for writing, maintaining, optimizing, and publishing documentation.
