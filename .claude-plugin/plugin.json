@@ -1,6 +1,6 @@
 {
   "name": "agents-documentation-suite",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Hierarchical documentation system with audience specialization (human/machine/team/public) and multi-platform publishing",
   "author": {
     "name": "Phil Beyer",
