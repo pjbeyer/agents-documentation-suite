@@ -1,0 +1,7 @@
+{
+  "name": "doc-suite-dev",
+  "plugins": [{
+    "name": "agents-documentation-suite",
+    "source": "./"
+  }]
+}
