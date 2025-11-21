@@ -112,6 +112,52 @@ Publish documentation to appropriate platforms with correct formatting and acces
 - Directory access
 - Profile-specific (via profile structure)
 
+## Pre-Publish Review
+
+Before publishing, run quality review if superpowers available:
+
+**Check for superpowers:**
+```bash
+if [ -d ~/.claude/plugins/cache/superpowers ]; then
+    echo "Running quality review..."
+
+    # Use Task tool with doc-reviewer subagent
+    # - subagent_type: "doc-reviewer"
+    # - document_path: [target file]
+    # - document_type: [detected or specified type]
+    # - context: "Pre-publish review for [platform]"
+
+    # Check review result
+    # If "Needs revisions" found:
+    #   - Display review feedback
+    #   - Use AskUserQuestion: "Publish anyway? (y/n)"
+    #   - If no: Exit with message to fix issues
+    #   - If yes: Continue with publishing
+
+    # If approved:
+    #   - Continue with publishing
+else
+    echo "Superpowers not available, skipping quality review"
+fi
+```
+
+**Skip review:**
+- Use `--skip-review` flag on command
+- Set in environment or config for automated publishing
+- Not recommended for public/team docs
+
+**When review is critical:**
+- Public-facing documentation
+- Client deliverables
+- API documentation
+- Team onboarding materials
+
+**When review can be skipped:**
+- Internal notes
+- Draft documentation
+- Quick updates to existing docs
+- Automated generated docs
+
 ## Quality Checklist
 
 - ✓ Published to correct platform
@@ -121,6 +167,7 @@ Publish documentation to appropriate platforms with correct formatting and acces
 - ✓ Code blocks render correctly
 - ✓ Images/assets accessible
 - ✓ Navigation functional
+- ✓ Quality review passed (if applicable)
 
 ## Integration
 
