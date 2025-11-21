@@ -116,6 +116,43 @@ Single command with multiple subcommands for all documentation needs.
 /doc organize
 ```
 
+### Review Documentation
+
+```bash
+# Review specific file
+/doc review --target=README.md
+
+# Review and auto-fix
+/doc review --target=docs/api.md --fix
+```
+
+## Workflow Integration
+
+### Automatic Documentation Detection
+
+When you complete work with `/work-finish`, the system automatically:
+- Analyzes your changes for documentation impact
+- Detects new APIs, features, or architectural changes
+- Prompts to create documentation issues
+- Links doc work to implementation work
+
+### Budget Violation Tracking
+
+When `/optimize-agents` detects AGENTS.md files over budget:
+- Automatically creates optimization issues
+- Includes specific recommendations
+- Tracks progress in project repos
+
+### Quality Review
+
+Before publishing documentation:
+- Runs superpowers doc-reviewer agent
+- Checks writing quality (elements-of-style)
+- Verifies completeness and accuracy
+- Ensures audience appropriateness
+
+See: [docs/workflow-integration.md](docs/workflow-integration.md)
+
 ## Audience Specialization
 
 ### Human Audience
