@@ -27,6 +27,7 @@ Hierarchical documentation with audience optimization and multi-platform publish
 - **Multi-Platform Publishing**: Notion, GitHub, local markdown
 - **13 Specialized Skills**: Writing, management, optimization, orchestration
 - **Single Command Interface**: `/doc` with subcommands
+- **Workflow Integration**: Automatic doc detection on work completion
 
 ## Installation
 
@@ -201,6 +202,11 @@ Three configuration files define behavior:
 - Cross-platform linking
 
 ## Integration with Other Plugins
+
+### workflow-system
+- Automatic doc impact detection on `/work-finish`
+- Creates tracking issues for documentation updates
+- See: [docs/workflow-integration.md](docs/workflow-integration.md)
 
 ### agents-learning-system
 - Document learnings become documentation improvements
