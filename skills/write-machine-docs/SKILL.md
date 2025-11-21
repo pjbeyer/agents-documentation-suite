@@ -214,6 +214,52 @@ Before completing, verify:
 - AI agents can quickly locate needed information
 - Fast context loading
 
+## Token Budget Validation
+
+After writing AGENTS.md, validate token budget using agents-context-system:
+
+**If agents-context-system available:**
+
+```bash
+# Check if plugin installed
+if [ -d ~/.claude/plugins/cache/agents-context-system ]; then
+    # Validate budget using context-system script
+    budget_script="$HOME/.claude/plugins/cache/agents-context-system/scripts/detect-budget-violations.sh"
+
+    if [ -f "$budget_script" ]; then
+        agents_file="[path to AGENTS.md just written]"
+
+        # Run validation
+        if ! "$budget_script" "$(dirname "$agents_file")" &>/dev/null; then
+            echo "⚠️  AGENTS.md exceeds token budget"
+            echo "File: $agents_file"
+            echo ""
+            echo "Running optimization analysis..."
+            echo "Use agents-context-system:optimize-agents-context skill for detailed optimization"
+        else
+            echo "✓ AGENTS.md within token budget"
+        fi
+    fi
+fi
+```
+
+**Integration with context-system:**
+- Automatic budget check after writing
+- Calls `detect-budget-violations.sh` for validation
+- Suggests `optimize-agents-context` skill if over budget
+- Seamless cross-plugin collaboration
+
+**When over budget:**
+1. Inform user of violation with specific metrics
+2. Suggest using `optimize-agents-context` skill
+3. Do not block completion (user can choose to optimize later)
+4. Budget violations can be tracked via workflow issues (from Batch 2)
+
+**Graceful degradation:**
+- If agents-context-system not installed: Skip validation
+- If script not found: Continue without error
+- Always complete writing successfully
+
 ## Integration
 
 This skill can be invoked by:
