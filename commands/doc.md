@@ -224,9 +224,9 @@ Configuration files in `config/`:
 
 ## Related
 
-- Plugin: agents-documentation-suite
+- Plugin: phil-ai-docs
 - Skills: 13 specialized documentation skills
-- Integration: agents-context-system (for AGENTS.md optimization)
+- Integration: phil-ai-context (for AGENTS.md optimization)
 
 ## Help
 
