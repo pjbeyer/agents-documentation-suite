@@ -2,7 +2,7 @@
 
 ## Overview
 
-agents-documentation-suite integrates with the workflow system to automatically detect documentation needs and create tracking issues.
+phil-ai-docs integrates with the workflow system to automatically detect documentation needs and create tracking issues.
 
 ## Features
 
@@ -135,5 +135,5 @@ cd ~/Projects/pjbeyer/my-project
 
 - PR merge hooks for doc checking
 - AGENTS.md budget violation detection
-- Integration with agents-context-system
+- Integration with phil-ai-context
 - Quality review with superpowers

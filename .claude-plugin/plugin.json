@@ -1,12 +1,12 @@
 {
-  "name": "agents-documentation-suite",
-  "version": "2.0.0",
+  "name": "phil-ai-docs",
+  "version": "2.1.0",
   "description": "Hierarchical documentation system with audience specialization (human/machine/team/public) and multi-platform publishing",
   "author": {
     "name": "Phil Beyer",
     "email": "6152278+pjbeyer@users.noreply.github.com"
   },
   "license": "MIT",
-  "repository": "https://github.com/pjbeyer/agents-documentation-suite",
+  "repository": "https://github.com/pjbeyer/phil-ai-docs",
   "keywords": ["documentation", "hierarchical", "audience-optimization", "multi-platform", "token-efficiency"]
 }

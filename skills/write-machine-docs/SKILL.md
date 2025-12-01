@@ -216,15 +216,15 @@ Before completing, verify:
 
 ## Token Budget Validation
 
-After writing AGENTS.md, validate token budget using agents-context-system:
+After writing AGENTS.md, validate token budget using phil-ai-context:
 
-**If agents-context-system available:**
+**If phil-ai-context available:**
 
 ```bash
 # Check if plugin installed
-if [ -d ~/.claude/plugins/cache/agents-context-system ]; then
+if [ -d ~/.claude/plugins/cache/phil-ai-context ]; then
     # Validate budget using context-system script
-    budget_script="$HOME/.claude/plugins/cache/agents-context-system/scripts/detect-budget-violations.sh"
+    budget_script="$HOME/.claude/plugins/cache/phil-ai-context/scripts/detect-budget-violations.sh"
 
     if [ -f "$budget_script" ]; then
         agents_file="[path to AGENTS.md just written]"
@@ -235,7 +235,7 @@ if [ -d ~/.claude/plugins/cache/agents-context-system ]; then
             echo "File: $agents_file"
             echo ""
             echo "Running optimization analysis..."
-            echo "Use agents-context-system:optimize-agents-context skill for detailed optimization"
+            echo "Use phil-ai-context:optimize-agents-context skill for detailed optimization"
         else
             echo "✓ AGENTS.md within token budget"
         fi
@@ -256,7 +256,7 @@ fi
 4. Budget violations can be tracked via workflow issues (from Batch 2)
 
 **Graceful degradation:**
-- If agents-context-system not installed: Skip validation
+- If phil-ai-context not installed: Skip validation
 - If script not found: Continue without error
 - Always complete writing successfully
 
@@ -265,5 +265,5 @@ fi
 This skill can be invoked by:
 - `/doc write --audience=machine` command
 - `/doc optimize` command for existing AGENTS.md files
-- agents-context-system plugin for AGENTS.md optimization
+- phil-ai-context plugin for AGENTS.md optimization
 - Other documentation workflows needing token-efficient output

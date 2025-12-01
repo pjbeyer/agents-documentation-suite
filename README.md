@@ -1,4 +1,4 @@
-# agents-documentation-suite
+# phil-ai-docs
 
 Hierarchical documentation with audience optimization and multi-platform publishing.
 
@@ -9,10 +9,10 @@ Hierarchical documentation with audience optimization and multi-platform publish
 ```json
 {
   "approvedSkills": [
-    "agents-documentation-suite:write-human-docs",
-    "agents-documentation-suite:write-machine-docs",
-    "agents-documentation-suite:optimize-docs",
-    "agents-documentation-suite:maintain-docs"
+    "phil-ai-docs:write-human-docs",
+    "phil-ai-docs:write-machine-docs",
+    "phil-ai-docs:optimize-docs",
+    "phil-ai-docs:maintain-docs"
   ]
 }
 ```
@@ -32,8 +32,8 @@ Hierarchical documentation with audience optimization and multi-platform publish
 ## Installation
 
 ```bash
-/plugin marketplace add pjbeyer/agents-marketplace
-/plugin install agents-documentation-suite@agents-marketplace
+/plugin marketplace add pjbeyer/phil-ai
+/plugin install phil-ai-docs@phil-ai
 ```
 
 ## Command: `/doc`
@@ -245,11 +245,11 @@ Three configuration files define behavior:
 - Creates tracking issues for documentation updates
 - See: [docs/workflow-integration.md](docs/workflow-integration.md)
 
-### agents-learning-system
+### phil-ai-learning
 - Document learnings become documentation improvements
 - Closed-loop tracking for doc updates
 
-### agents-context-system
+### phil-ai-context
 - AGENTS.md optimization
 - Hierarchical context loading
 - MCP configuration documentation
@@ -275,7 +275,7 @@ Publish where your audience is: Notion for teams, GitHub for open source, local 
 
 ### Structure
 ```
-agents-documentation-suite/
+phil-ai-docs/
 ├── .claude-plugin/
 │   └── plugin.json
 ├── skills/
@@ -300,7 +300,7 @@ agents-documentation-suite/
 {
   "name": "dev",
   "plugins": [{
-    "name": "agents-documentation-suite",
+    "name": "phil-ai-docs",
     "source": "./"
   }]
 }
@@ -308,8 +308,8 @@ agents-documentation-suite/
 
 2. Install for testing:
 ```bash
-/plugin marketplace add /path/to/agents-documentation-suite
-/plugin install agents-documentation-suite@dev
+/plugin marketplace add /path/to/phil-ai-docs
+/plugin install phil-ai-docs@dev
 ```
 
 3. Restart Claude Code and test commands
@@ -324,4 +324,4 @@ MIT License
 
 ## Repository
 
-https://github.com/pjbeyer/agents-documentation-suite
+https://github.com/pjbeyer/phil-ai-docs
