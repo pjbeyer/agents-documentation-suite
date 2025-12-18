@@ -1,6 +1,6 @@
 {
   "name": "phil-ai-docs",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Hierarchical documentation system with audience specialization (human/machine/team/public) and multi-platform publishing",
   "author": {
     "name": "Phil Beyer",

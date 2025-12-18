@@ -20,8 +20,9 @@ DATE=$(date +"%Y-%m-%d")
 REPO_ROOT=$(git rev-parse --show-toplevel)
 ANALYSIS_REPORT="$REPO_ROOT/docs/optimization/agents-md-analysis-$DATE.json"
 
-# Load template
-TEMPLATE_PATH="$HOME/.claude/plugins/cache/agents-documentation-suite/templates/optimization-issue.md"
+# Load template (relative to script location for portability)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TEMPLATE_PATH="$SCRIPT_DIR/../templates/optimization-issue.md"
 
 if [ ! -f "$TEMPLATE_PATH" ]; then
     echo "Error: Template not found at $TEMPLATE_PATH"
